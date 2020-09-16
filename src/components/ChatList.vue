@@ -2,7 +2,7 @@
   <div class="container">
     <button @click="createRoom()">Create Room</button>
     <ul>
-      <li v-for="chat of chats" :key="chat.id">
+      <li v-for="chat of chats" :key="chat.id" class="chat-list">
         <p>
           Started:
           {{new Date(chat.createdAt).toLocaleString()}}
@@ -11,14 +11,14 @@
           Participants:
           {{chat.members.join(', ')}}
         </p>
-        <router-link :to="{name: 'chat', params: {id: chat.id}}">Open chat</router-link>
+        <router-link :to="{name: 'chat', params: {id: chat.id}}">View</router-link>
       </li>
     </ul>
   </div>
 </template>
 
 <style>
-li {
+.chat-list {
   display: flex;
   margin: 1em 0;
   padding: 0.5em 0;

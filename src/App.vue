@@ -20,6 +20,7 @@ export default {
 <style>
 :root {
   --main: rgb(65, 184, 131);
+  --accent: rgb(53, 73, 94);
 }
 
 html,
@@ -28,7 +29,7 @@ body,
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background: rgb(53, 73, 94);
+  background: var(--accent);
 }
 a {
   background: none;
@@ -39,6 +40,16 @@ a {
 li,
 ul {
   list-style: none;
+}
+
+input {
+  border: 1px solid var(--main);
+  padding: 0.5em 1em;
+  font: inherit;
+  outline: none;
+  border-radius: 7px;
+  overflow: hidden;
+  color: whitesmoke;
 }
 
 button,
@@ -80,5 +91,14 @@ nav a {
 
 .container {
   padding: 1em;
+  max-width: 600px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(6, auto);
+  column-gap: 1em;
 }
 </style>
