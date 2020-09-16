@@ -42,7 +42,8 @@ ul {
   list-style: none;
 }
 
-input {
+input,
+textarea {
   border: 1px solid var(--main);
   padding: 0.5em 1em;
   font: inherit;
@@ -50,6 +51,7 @@ input {
   border-radius: 7px;
   overflow: hidden;
   color: whitesmoke;
+  resize: none;
 }
 
 button,
