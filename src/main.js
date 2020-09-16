@@ -4,7 +4,6 @@ import { firestorePlugin } from 'vuefire'
 import VueRouter from 'vue-router'
 import VueCompositionApi from '@vue/composition-api'
 
-import Home from './components/Home.vue'
 
 Vue.use(VueCompositionApi)
 Vue.use(VueRouter)
@@ -12,9 +11,13 @@ Vue.use(firestorePlugin)
 
 Vue.config.productionTip = false
 
+import Home from './components/Home.vue'
+import ChatRoom from './components/ChatRoom.vue'
+
 const router = new VueRouter({
   routes: [
-    { path: '/', component: Home }
+    { path: '/', component: Home },
+    { path: '/chats/:id', component: ChatRoom },
   ]
 })
 

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <header>
-      <h1>Chat</h1>
+      <nav>
+        <a>Chat</a>
+      </nav>
     </header>
     <router-view></router-view>
   </div>
