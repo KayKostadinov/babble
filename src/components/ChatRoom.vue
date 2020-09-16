@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h3>{{chatId}}</h3>
-  </div>
+  <main>
+    <h3>Babble on {{chatId}}</h3>
+  </main>
 </template>
 
 <script>

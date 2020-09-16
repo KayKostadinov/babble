@@ -17,7 +17,7 @@ import ChatRoom from './components/ChatRoom.vue'
 const router = new VueRouter({
   routes: [
     { path: '/', component: Home },
-    { path: '/chats/:id', component: ChatRoom },
+    { path: '/chats/:id', component: ChatRoom, name: 'chat' },
   ]
 })
 

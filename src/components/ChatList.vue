@@ -1,16 +1,31 @@
 <template>
-  <div>
+  <div class="container">
     <button @click="createRoom()">Create Room</button>
     <ul>
-      <router-link :to="{name: 'chat', params: {id: chat.id}}">
-        <li v-for="chat of chats" :key="chat.id">
-          <p>Started: {{new Date(chat.createdAt).toLocaleString()}}</p>
-          <p>Participants: {{chat.members.join(', ')}}</p>
-        </li>
-      </router-link>
+      <li v-for="chat of chats" :key="chat.id">
+        <p>
+          Started:
+          {{new Date(chat.createdAt).toLocaleString()}}
+        </p>
+        <p>
+          Participants:
+          {{chat.members.join(', ')}}
+        </p>
+        <router-link :to="{name: 'chat', params: {id: chat.id}}">Open chat</router-link>
+      </li>
     </ul>
   </div>
 </template>
+
+<style>
+li {
+  display: flex;
+  margin: 1em 0;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--main);
+  font-size: 0.9em;
+}
+</style>
 
 <script>
 import { db } from "../firebase";
